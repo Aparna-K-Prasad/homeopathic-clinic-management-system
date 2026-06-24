@@ -1,0 +1,214 @@
+/* General body styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    height: 150vh;
+    scroll-behavior: smooth;
+}
+
+
+.appointment-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Card-like shadow */
+    border-radius: 8px;
+}
+
+.appointment-container h1 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #333 !important; /* Keep this */
+    margin-bottom: 30px;
+}
+
+.appointment-container h1.custom-class { /* Make it more specific if needed */
+    color: #333 !important;
+}
+/* Calendar section styling */
+.calendar-section, .time-slots-section  {
+    margin-bottom: 30px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nav-arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #1b3757;
+}
+
+
+
+
+/* Calendar table styling */
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-table th, .calendar-table td {
+    width: 14.28%; /* Equal column width for days */
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.calendar-table th {
+    background-color: #224d7a;
+    color: white;
+    font-weight: normal;
+}
+
+.calendar-table td {
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.calendar-table td:hover {
+    background-color: #f0f0f0;
+}
+
+.calendar-table .selected-date {
+    background-color: #224d7a;
+    color: white;
+    font-weight: bold;
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.time-slot {
+    background-color: #759ecd;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.time-slot:hover {
+    background-color: #78a1d0;
+}
+
+.time-slot.selected {
+    background-color: #195191;
+    color: #fff;
+}
+
+h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #2e5885;
+    margin: 0;
+    gap: 10px;
+}
+
+#monthDisplay {
+    font-size: 18px;
+    color: #2e5885;
+}
+
+#yearSelect {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #69a2de;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #2e5885;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+#yearSelect:hover, #yearSelect:focus {
+    border-color: #2e5885;
+    outline: none;
+}
+
+#yearSelect::-ms-expand {
+    display: none;
+}
+
+#yearSelect {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('bx-chevron-down.svg') no-repeat right 10px center;
+    background-size: 12px; 
+    padding-right: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+}
+/* Button styling */
+button {
+    padding: 12px 20px;
+    background-color: #224d7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 30px auto 0;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-link {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .appointment-container {
+        padding: 15px;
+    }
+
+    .calendar-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

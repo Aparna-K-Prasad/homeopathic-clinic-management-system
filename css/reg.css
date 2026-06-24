@@ -1,0 +1,189 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #c2e9fb, #a1c4fd);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 40px;
+}
+
+.left-section {
+    background-color: #fff;
+}
+
+
+
+.right-section {
+    padding: 20px;
+    border: 1px solid #ccc; /* Add a border for the section */
+    border-radius: 5px; /* Round the corners */
+    background-color:#19385b;
+    color: #fff;
+}
+.right-section h2 {
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.right-section label {
+    display: block; /* Block display for labels */
+    margin-top: 10px; /* Space above each label */
+    font-weight: bold; /* Make labels bold */
+}
+
+.right-section input,
+.right-section textarea {
+    width: 100%; /* Full width for input fields */
+    padding: 10px; /* Padding inside fields */
+    margin-top: 5px; /* Space above the input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.right-section input:focus,
+.right-section textarea:focus {
+    border-color: #66afe9; /* Focus border color */
+    outline: none; /* Remove default outline */
+}
+
+.right-section .error {
+    color: rgb(176, 62, 62); /* Red color for error messages */
+    font-size: 0.9em; /* Smaller font size for errors */
+    margin-top: 5px; /* Space above error messages */
+}
+
+.right-section .btn {
+    margin-top: 50px; /* Space above the button */
+    padding: 10px 15px; /* Padding for button */
+    background-color: #5cb85c; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer;
+    margin-left: 100px;
+    width: 250px;
+}
+
+.right-section .btn:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'Dancing Script', cursive;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.name-fields input {
+    width: 48%;
+}
+
+.row input {
+    flex: 1;
+}
+
+
+
+.btn {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    color: #4c43f1;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e1e1e1;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 12px 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #1c77fd;
+    font-family: 'Dancing Script', cursive;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    gap: 50px;
+   
+}
+
+header nav ul li a {
+    color: #34557a;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 30px;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: 'Dancing Script', cursive;
+
+}
+
+header nav ul li a:hover {
+    color: #00060c !important;
+}

@@ -1,0 +1,152 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #f0f4f8;
+    padding: 20px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.health-bag-slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1300px; /* Further reduced width for an even smaller box */
+    height: 250px;
+    margin: 50px auto;
+    color: white;
+    position: relative;
+    overflow: hidden; /* Keeps content inside the box */
+}
+
+.content {
+    max-width: 60%;
+}
+p {
+    color: #1d5c71;
+    margin: 10px 0;
+    font-weight: 400; 
+    font-size: 25px; 
+    margin-bottom: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 280px;
+    height: auto; /* Reduced width for the image */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.doctor-image {
+    max-width: 90%; /* Further adjust image size to fit */
+    height: auto;
+    position: relative;
+    right: 0; /* Keep image inside the box */
+    transform: scaleX(-1); /* Flip the image horizontally */
+    animation: popUp 1s ease-in-out forwards;
+    z-index: 1;
+}
+
+@keyframes popUp {
+    0% {
+        transform: translateX(50px) scaleX(-1); /* Flip while animating */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scaleX(-1); /* Ensure it's flipped in the final state */
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-family: Dancing Script, serif; 
+    font-weight: 400; 
+    font-size: 50px; 
+    color: #2873b1;
+}
+h2{
+    font-weight: 400; 
+    font-size: 30px; 
+    color: #0b3659; 
+}
+.highlight {
+    font-weight: bold;
+    color: #5e57bc;
+}
+
+.welcome-message {
+    font-size: 20px;
+    color: #4CAF50;
+    font-weight: bold;
+    font-style: italic; /* Makes the text italic */
+}
+
+.info-cards .card {
+    flex: 1 1 calc(50% - 20px); /* Adjust to take 50% of the container's width minus some spacing */
+    min-width: 350px; /* Adjust the minimum width if needed */
+}
+
+.info-cards {
+    display: flex;
+    gap: 20px; /* Space between calendar and cards */
+    margin-top: 20px; /* Space above info cards */
+}
+
+.calendar {
+    width: 600px; /* Take full width of its container */
+    max-width: 2000px; /* Set a maximum width for smaller size */
+    font-size: 1.1em;  flex: 1; /* Allow both to grow equally */
+    min-width: 300px; /* Set a minimum width to prevent shrinking too much */
+    height: 270px; /* Allow height to adjust based on content */
+    background-color: #ffffff; /* Ensure both have the same background color */
+    border-radius: 8px; /* Rounded corners for both */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Padding for inner content */
+    overflow: auto;
+    margin-top: 30px;
+}
+
+.calendar th {
+    background-color: #1d5c71; /* Darker background for the header */
+    color: white; /* White text for contrast */
+    padding: 10px; /* Adjusted padding for the header */
+}
+
+.calendar th, .calendar td {
+    border: 1px solid #ddd;
+    padding: 10px; /* Reduced padding for a smaller appearance */
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.calendar td {
+    background-color: #f9f9f9; /* Light background for table cells */
+}
+
+/* Highlight selected dates in the calendar */
+.calendar td.selected {
+    background-color: #1d5c71; /* Background color for selected dates */
+    color: white; /* Change text color for better contrast */
+}
+.cards-container {
+    display: flex; /* Enables Flexbox for cards */
+    justify-content: space-between; /* Space between cards */
+    align-items: flex-start; /* Align cards at the top */
+    gap: 20px; /* Space between the cards */
+    flex: 1 1 auto; 
+    margin-left: 20px; /* Add margin to the left */
+    margin-top: 30px;
+    margin-bottom: 30px; /* Increase this value for more space above */
+}

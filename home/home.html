@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeo Clinic</title>
+        <link rel="stylesheet" href="/minipro/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Homeo Clinic</h1>
+            <nav>
+                <ul>
+                    <li><a href='/minipro/signlog/log.html?redirectToBooking=true'>Appoinment</a></li>
+                    <li><a href='/minipro/signlog/log.html?redirectToReg=true'>Registration</a></li>
+                    <div class="buttons">
+                        <a href='/minipro/signlog/log.html' class="btn">Login</a>
+                        <a href='/minipro/signlog/sign.php' class="btn">Sign Up</a>
+                    </div>
+                    
+                </ul>
+            </nav>
+            <div class="menu">
+                <button class="menu-button" onclick="toggleMenu()">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+                <div class="menu-dropdown">
+                    <a href='about.html'>About Us</a>
+                    <a href='service.html'>Services</a>
+                    <a href='/minipro/home/contact/contact.php'>Contact Us</a>
+                    <a href='#location'>Location</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="home">
+            <div class="centered-content">
+            <h1 style>HOMEOPATHIC CLINIC <br>XXX,INDIA</h1><br><br>
+                <p>You don't have to do it alone, <br>LIFE CAN BE CHALLENGING.TOGETHER IT IS EASIER.</p>
+            </section>
+            <section id="appt">
+                <div class="appt-box">
+                    <h2>Opening Hours</h2>
+
+                    <table style="border-collapse: collapse; width: 100%;">
+                        <tr style="height: 20px;">
+                            <td style="padding-left: 50px; padding-right: 5px; padding-bottom: 10px;">Monday-Friday &nbsp;&nbsp;&nbsp;&nbsp; 8:00 AM-11:30 AM & 4:00 PM-6:30 PM</td>
+                        </tr>
+                        <tr style="height: 20px;">
+                            <td style="padding-left: 50px; padding-right: 10px; padding-bottom: 10px;white-space: pre;">        Saturday &nbsp;&nbsp;&nbsp;      9:00 AM-12:00 AM & 5:00 PM-7:30 PM</td>
+                        </tr>
+                    </table>
+                    
+                    
+                <h2 style="margin-top: 30px;">Appointments</h2>
+                <p>Book an appointment and avoid the hassle</p>
+                <button onclick="bookConsultation()">Book Appointment</button>
+            </div>
+            </div>
+        </section>
+        <section id="about-us">
+            
+            <h3 style="font-family: 'Nunito', sans-serif; color: #5c5c5c; font-size: 50px; text-align: center; position: relative;">
+                <span style="display: inline-block; width: 300px; height: 2px; background-color: black; vertical-align: middle; margin-right: 10px;"></span>
+                About Our<span style="color: #536b88; margin-left: 10px; font-family: 'Nunito', sans-serif; font-size: 50px;">Clinic
+                </span>
+                <span style="display: inline-block; width: 300px; height: 2px; background-color: #536b88; vertical-align: middle; margin-left: 10px;"></span>
+            </h3>
+            
+        <hr><br>
+        <p style="text-align: center; font-family: 'Nunito', sans-serif; font-weight: bold; color: #605959; font-size: 28px;">
+            A One Stop Centre in your neighbourhood for all your healthcare needs
+        </p>
+        <br><br>
+        <p class="styled-paragraph">
+            We are treating via taking the complete aspects of patient’s mind as well as physical activities in entirely and giving holistic treatments to all ailments through Homeopathy. <br>
+            Thus people can stay healthy in natural way.<br><br>
+            Leading you along a path of good health with the practice of a holistic alternative medical
+            discipline, Dr XXX has the healing touch.<br><br>Her expertise extends to all
+            disciplines of homeopathy including remedying allergy, asthma, immunity, infertility, lifestyle
+            disease, migraine, paediatrics, renal stones and rheumatic pain.
+        </p>
+        
+        </section>
+
+        <section id="services">
+            <h3 style="font-family: 'Nunito', sans-serif; color: #5c5c5c; font-size: 50px; text-align: center; position: relative;">
+                <span style="display: inline-block; width: 300px; height: 2px; background-color: black; vertical-align: middle; margin-right: 10px;"></span>
+                Our<span style="color: #536b88; margin-left: 10px; font-family: 'Nunito', sans-serif; font-size: 50px;">Services
+                </span>
+                <span style="display: inline-block; width: 300px; height: 2px; background-color: #536b88; vertical-align: middle; margin-left: 10px;"></span>
+            </h3>
+            <hr>
+                <div class="service-items">
+                    <div class="service-item">
+                        <img src="https://media.istockphoto.com/id/956414812/photo/depressed-businesswoman-rubbing-eyes-in-office.jpg?s=612x612&w=0&k=20&c=-0tO-7wcgwAJgWceAvk5_c56i79RDCzJlY8UTcjxSgM=" alt="Migraine">
+                        <p>Acute and chronic migraines,and sinus issues</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://media.istockphoto.com/id/1217526208/photo/girl-in-scarf-blowing-his-nose-handkerchief.jpg?s=612x612&w=0&k=20&c=E_k2No-QHmcHGuXIYYga-8YANoujVgVL267qVEmAYFA=" alt="Allergy">
+                        <p>All types of skin and respiratory allergic conditions for all ages</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://media.istockphoto.com/id/1153954269/photo/female-doctor-assists-young-asthmatic-patient.jpg?s=612x612&w=0&k=20&c=bULAf7FKM8R6HT_6H9lEr8bRg1rpES96-5FYnBcnJck=" alt="Asthma">
+                        <p>Asthma</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://happyhealthy.nl/wp-content/uploads/hoge-bloeddruk-verlagen.jpg" alt="Lifestyle Diseases">
+                        <p>Lifestyle diseases like Diabetes, Hypertension, Cholesterol</p>
+                    </div>
+                </div>
+                <div class="view-more">
+                    <button onclick="location.href='service.html'">View More</button>
+                </div>
+            </div>   
+        </section>
+        <section class="homeopathy-grid-section">
+            <h3 style="font-family: 'Nunito', sans-serif; color: #5c5c5c; font-size: 50px; text-align: center; position: relative;">
+                <span style="display: inline-block; width: 300px; height: 2px; background-color: black; vertical-align: middle; margin-right: 10px;"></span>
+                Why<span style="color: #536b88; margin-left: 10px; font-family: 'Nunito', sans-serif; font-size: 50px;">Homeopathy?</span>
+                <span style="display: inline-block; width: 300px; height: 2px; background-color: #536b88; vertical-align: middle; margin-left: 10px;"></span>
+            </h3>
+            <hr><br><br>
+            <div class="grid-container">
+                <div class="grid-item image-container">
+                    <img src="https://media.istockphoto.com/id/178800509/photo/alternative-medicine.jpg?s=612x612&w=0&k=20&c=VpaGQa9cvigvywdZHx-VMXy89v2RZulcF2i4xUElJrI=" alt="Homeopathy Image">
+                </div>
+                <div class="grid-item text-container">
+                    <div class="text-box">
+                        <p><b>Immediate Results</b></p>
+                        <p>The medications used at our homeo clinic are all German formulations which are immediate-acting unlike the conventional misconception that homoeopathic remedies take time to act.</p>
+                    </div>
+                    <div class="text-box">
+                        <p><b>Disease-free in 6 Months</b></p>
+                        <p>The patient gets symptomatic relief within a few days and complete elimination of the disease takes a period of up to 6 months.</p>
+                    </div>
+                    <div class="text-box">
+                        <p><b>Zero Side Effects</b></p>
+                        <p>Unlike other medical disciplines, Homoeopathic remedies do no harm. Even with long-term chronic prescription of medication, there are no side effects.</p>
+                    </div>
+                </div>
+                <div class="grid-item text-container">
+                    <div class="text-box">
+                        <p><b>Boosting Innate Immunity</b></p>
+                        <p>Our specialised approach is focused on improving a patient’s innate immunity so that the body retains its vitality to naturally get into a state of absolute health.</p>
+                    </div>
+                    <div class="text-box">
+                        <p><b>Holistic Healing</b></p>
+                        <p>When a person comes in for homoeopathic treatment, there is a holistic approach to healing- alongside physical conditions, psychological health and emotional wellbeing are considered.</p>
+                    </div>
+                    <div class="text-box">
+                        <p><b>Integrative Approach</b></p>
+                        <p>Alongside the prescription of homoeopathic medications, the patient is generally also recommended dietary modifications, exercise and yoga regimes to attain a state of health.</p>
+                    </div>
+                </div>
+                <div class="grid-item image-container">
+                    <img src="https://st4.depositphotos.com/13194036/39623/i/450/depositphotos_396234886-stock-photo-wildflowers-herbs-bottles-pills-concrete.jpg" alt="Homeopathy Image">
+                </div>
+            </div>
+        </section>
+        <section id="location">
+            <h3>
+                <span class="line"></span>
+                Our<span class="highlight">Location</span>
+                <span class="line"></span>
+            </h3>
+            <hr>
+            <div class="content-wrapper">
+                <div class="map-container">
+<iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1953.123456!2d77.160000!3d9.968000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNearby%20Landmark!5e0!3m2!1sen!2sin!4v0000000000000xxx"
+  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+</iframe>
+<!-- NOTE: Exact location hidden in public version -->
+</div>
+                <div class="contact-details">
+                    <p><i class='bx bx-current-location'></i> <strong>Our Address</strong></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;XXXX</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;XXX</p><br>
+                    
+                    <p><i class='bx bx-envelope'></i> <strong>General Enquiries</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;contact@homeoclinic.com</p><br>
+
+<p><i class='bx bx-phone'></i> <strong>Call Us</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;+91 98765 xxxxx</p><br>
+<!-- NOTE: Real contact details replaced for privacy in public version -->
+
+                    
+                    <p><i class='bx bx-time-five'></i> <strong>Our Timing</strong></p>
+                    <table style="border-collapse: collapse; width: 100%;">
+                        <tr style="height: 20px;">
+                            <td style="padding-left: 20px; padding-right: 5px; padding-bottom: 10px;">Monday-Friday &nbsp;&nbsp;&nbsp;&nbsp; 8:00 AM-11:00 AM & 4:00 PM-6:30 PM</td>
+                        </tr>
+                        <tr style="height: 20px;">
+                            <td style="padding-left: 20px; padding-right: 10px; padding-bottom: 10px;white-space: pre;">Saturday &nbsp;&nbsp;&nbsp;            9:00 AM-12:00 AM & 5:00 PM-7:30 PM</td>
+                        </tr>
+                    </table>  
+                </div>
+            </div>
+            <div class="image">
+                <img src="https://ssiosrilanka.org/website/img/line-2.png" alt="Divider">
+            </div>
+        </section>
+        
+
+        
+    </main>
+    <script src="/minipro/js/home.js"></script>
+</body>
+</html>

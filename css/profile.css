@@ -1,0 +1,79 @@
+/* General body styling */
+body {
+    background-color: #f9f9f9; /* Light background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling */
+.container {
+    padding: 20px; /* Padding around the container */
+}
+
+/* Card styling */
+.card {
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevents overflow */
+    border: none; /* No border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: white; /* White background for cards */
+}
+
+/* Card header styling */
+.card-header {
+    font-size: 24px; /* Header font size */
+    text-align: center; /* Centered text */
+    background-color: #dbdada !important; /* Header background */
+    color: #224d7a !important; /* White text color */
+    padding: 10px; /* Padding */
+}
+
+/* Card body styling */
+.card-body {
+    padding: 30px; /* Body padding */
+}
+
+/* Heading styling */
+h2 {
+    font-family: 'Dancing Script', cursive; /* Custom font */
+    font-size: 2.5rem; /* Font size */
+    color: #224d7a; /* Dark blue color for headings */
+    text-align: center; /* Centered heading */
+}
+
+/* Form label styling */
+.form-label {
+    font-weight: bold; /* Bold labels */
+    color: #224d7a; /* Dark blue for labels */
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #2f5883; /* Button color */
+    border-color: #224d7a; /* Border color */
+    color: #fff;
+    margin-top: 50px;
+    margin-left:250px; /* Make button full width */
+    padding: 10px; /* Adjust padding */
+    border-radius: 4px; /* White text */
+}
+
+.btn-primary:hover {
+    background-color: #1c3d5e; /* Darker shade on hover */
+    border-color: #1c4a6a; /* Slightly darker border on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .card {
+        margin: 10px; /* Margin on small screens */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Smaller font size on small screens */
+    }
+}
+.form-check {
+    margin-right: 0.5rem; /* Adjust the value to decrease or increase spacing */
+}

@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #173b63;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #007bff;
+    color: white;
+}
+h1{
+    font-family:'Dancing Script', cursive;
+    font-optical-sizing: auto;
+     font-weight: 700; 
+     font-style: normal;
+     text-align:center;
+     font-size: 40px;
+}
+button {
+    padding: 10px 20px; /* Add padding */
+    margin: 5px; /* Space between buttons */
+    border: 2px solid rgb(22, 22, 49); /* Blue border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: white; /* White background */
+    color: #173b63; /* Blue text */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #284260; /* Blue background on hover */
+    color: white; /* White text on hover */
+}
+/* Style the select dropdown */
+select {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect on the select element */
+select:hover {
+    background-color: #d1e0e0; /* Light blue background on hover */
+    color: #333;
+}
+
+/* Ensure the selected option maintains a visible focus */
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}

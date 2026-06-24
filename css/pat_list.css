@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 100%; /* Ensure it takes the full width */
+    padding: 15px;   /* Add some padding for spacing */
+    margin: 0 auto;  /* Center the container */
+    background-color: white; /* Ensure the container has a white background */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.table-responsive {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    margin-bottom: 20px; /* Add space below the table */
+    margin-top: 30px;
+}
+
+.table {
+    width: 100%; /* Ensure table takes full width of container */
+    max-width: 100%; /* Prevents the table from exceeding the container width */
+    margin: 0; /* Remove default margins */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    box-sizing: border-box; /* Include padding and border in total width */
+}
+
+h1 {
+    color: #34557a;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+}
+
+form {
+    margin-bottom: 20px; /* Space between form and table */
+}
+
+th, td {
+    padding: 10px; /* Padding for table cells */
+    text-align: center; /* Center the content */
+    border: 1px solid #dee2e6; /* Add border for table cells */
+}
+
+th {
+    background-color: #3c6b9d; /* Header background color */
+    color: white; /* Header text color */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row colors */
+}
+
+/* Button styles for search */
+.btn-primary {
+    background-color: #3c6b9d; /* Primary button color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Round button corners */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.btn-primary:hover {
+    background-color: #34557a ; /* Darker color on hover */
+}

@@ -1,0 +1,12 @@
+SELECT 
+    pid, 
+    name, 
+    CASE 
+        WHEN TIMESTAMPDIFF(YEAR, dob, CURDATE()) >= 1 THEN CONCAT(TIMESTAMPDIFF(YEAR, dob, CURDATE()), 'Y')
+        WHEN TIMESTAMPDIFF(MONTH, dob, CURDATE()) >= 1 THEN CONCAT(TIMESTAMPDIFF(MONTH, dob, CURDATE()), 'M')
+        ELSE CONCAT(TIMESTAMPDIFF(DAY, dob, CURDATE()), 'D')
+    END AS age
+FROM 
+    reg
+WHERE 
+    pid = ? OR name LIKE ?;

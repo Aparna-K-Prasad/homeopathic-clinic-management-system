@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Dashboard</title>
+    <link rel="stylesheet" href="/minipro/css/dash.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css"> 
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="clinic-name">
+                <h3>Homeo Clinic</h3>
+            </div>            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" id="dash"><i class='bx bxs-dashboard'></i>Dashboard</a></li>       
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="appointments"><i class='bx bx-calendar'></i>Appointments <i class="bx bx-chevron-down arrow"></i></a>
+                        <ul class="dropdown-menu" id="appointments-menu">
+                            <li><a href="/minipro/docdash/appointments/appt_list.php" id="appt_list">Appointment List</a></li>
+                            <li><a href="/minipro/docdash/appointments/request.php" id="rqst">Appointment Requests</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="patients"><i class='bx bx-user'></i>Patients <i class="bx bx-chevron-down arrow"></i></a>
+                        <ul class="dropdown-menu" id="patients-menu">
+                            <li><a href="/minipro/docdash/patients/pat_list.php" id="pat-list">Patient List</a></li>
+                            <li><a href="/minipro/docdash/patients/dreg.php" id="reg_pat">New Patient</a></li>
+                            <li><a href="/minipro/docdash/patients/rec.php" id="pat-rec">Patient Records</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="medicines"><i class='bx bxs-capsule'></i>Medicines <i class="bx bx-chevron-down arrow"></i></a>
+                        <ul class="dropdown-menu" id="medicines-menu">
+                            <li><a href="/minipro/docdash/medicine/new_med.php" id="new-med">New Medicine</a></li>
+                            <li><a href="/minipro/docdash/medicine/add_med.php" id="add-med">Add Medicines</a></li>
+                            <li><a href="/minipro/docdash/medicine/med_list.php" id="view-med">Medicine List</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="cons"><i class='bx bx-user'></i>Consultation</a></li>          
+                    <li><a href="#" id="messages"><i class='bx bx-message'></i>Messages</a></li>
+                    <li><a href="#" id="pwd"><i class="bx bx-key"></i>Reset Password</a></li>
+                    <li><a href="#" id="logout"><i class='bx bx-log-out'></i>Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <iframe name="content-frame" src="/minipro/docdash/others/overview.php" frameborder="0" class="content-frame"></iframe>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/minipro/js/dash.js"></script>
+    <script>
+    document.getElementById('logout').addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        Swal.fire({
+            title: 'Logout',
+            text: 'Are you sure you want to logout?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, logout!',
+            allowOutsideClick: false,
+            allowEscapeKey: false
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '/minipro/signlog/logout.php';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

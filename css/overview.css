@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f4f8;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.health-bag-slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1300px; /* Further reduced width for an even smaller box */
+    height: 250px;
+    margin: 50px auto;
+    color: white;
+    position: relative;
+    overflow: hidden; /* Keeps content inside the box */
+}
+
+.content {
+    max-width: 60%;
+}
+
+h1 {
+    font-family: Dancing Script, serif; 
+    font-weight: 400; 
+    font-size: 50px; 
+    color: #2873b1;
+}
+h2{
+    font-weight: 400; 
+    font-size: 30px; 
+    color: #0b3659; 
+}
+.highlight {
+    font-weight: bold;
+    color: #5e57bc;
+}
+.calendar .highlight {
+    background-color:#5b8998;
+    color: #08141f; 
+}
+p {
+    color: #1d5c71;
+    margin: 10px 0;
+    font-weight: 400; 
+    font-size: 25px; 
+    margin-bottom: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 280px;
+    height: auto; /* Reduced width for the image */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pat-image {
+    max-width: 90%; /* Further adjust image size to fit */
+    height: auto;
+    position: relative;
+    right: 0; /* Keep image inside the box */
+    transform: scaleX(-1); /* Flip the image horizontally */
+    animation: popUp 1s ease-in-out forwards;
+    z-index: 1;
+}
+
+@keyframes popUp {
+    0% {
+        transform: translateX(50px) scaleX(-1); /* Flip while animating */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scaleX(-1); /* Ensure it's flipped in the final state */
+        opacity: 1;
+    }
+}
+
+/* Adjusted styles for the container holding calendar and appointment box */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px; /* Adjusted gap for spacing */
+    flex-wrap: wrap; /* Allow items to wrap if screen size is small */
+}
+
+
+
+/* Adjusted Calendar styles */
+.calendar {
+    width: 600px; /* Take full width of its container */
+    max-width: 2000px; /* Set a maximum width for smaller size */
+    font-size: 1.1em;  flex: 1; /* Allow both to grow equally */
+    min-width: 300px; /* Set a minimum width to prevent shrinking too much */
+    height: auto; /* Allow height to adjust based on content */
+    background-color: #ffffff; /* Ensure both have the same background color */
+    border-radius: 8px; /* Rounded corners for both */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Padding for inner content */
+    overflow: auto; /* Prevent overflow and allow scrolling if content exceeds */ /* Slightly smaller font size for better fit */
+}
+
+.calendar th {
+    background-color: #1d5c71; /* Darker background for the header */
+    color: white; /* White text for contrast */
+    padding: 10px; /* Adjusted padding for the header */
+}
+
+.calendar th, .calendar td {
+    border: 1px solid #ddd;
+    padding: 10px; /* Reduced padding for a smaller appearance */
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.calendar td {
+    background-color: #f9f9f9; /* Light background for table cells */
+}
+
+/* Highlight selected dates in the calendar */
+.calendar td.selected {
+    background-color: #1d5c71; /* Background color for selected dates */
+    color: white; /* Change text color for better contrast */
+}
+.appointments-box{
+    flex: 1; /* Allow both to grow equally */
+    min-width: 300px; /* Set a minimum width to prevent shrinking too much */
+    height: auto; /* Allow height to adjust based on content */
+    background-color: #ffffff; /* Ensure both have the same background color */
+    border-radius: 8px; /* Rounded corners for both */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Padding for inner content */
+    overflow: auto; /* Prevent overflow and allow scrolling if content exceeds */
+    display: flex; /* Enable flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center;
+}
+/* Add a title for appointments */
+.appointments-box h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 1.5em; /* Larger font size for the title */
+    color: #1d5c71; /* Consistent color for the heading */
+    text-align: center; /* Center the title */
+}
+
+/* Style for appointment items (optional) */
+.appointment-item {
+    justify-items: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px;
+    margin: 10px 0; /* Space between items */
+    background-color: #f0f4f8; /* Light background for items */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    text-align: center; /* Center the text in appointment items */
+}
+
+/* Highlight appointment item on hover */
+.appointment-item:hover {
+    background-color: #e1f5fe; /* Light blue highlight on hover */
+}  

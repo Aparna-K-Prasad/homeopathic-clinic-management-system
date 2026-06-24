@@ -1,0 +1,475 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    color: #333;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: #fff;
+    padding: 12px 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #fff;
+    margin-top: -11px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #1b3757;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin-top: 20px;
+    margin-right: -400px;
+    gap: 50px;
+}
+
+header nav ul li a {
+    color: #34557a;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #00060c;
+}
+.buttons {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 15px;
+    width: 100%;
+    margin-left: 200px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.btn {
+    background-color: #1b3757;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #6582a3;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-button .line {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #1b3757;
+    margin: 5px 0;
+    background-color: #333;
+}
+
+.menu-dropdown {
+    display: none;
+}
+
+.menu-button:hover + .menu-dropdown {
+    display: block;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 20px;
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    z-index: 1000;
+    width: 100px; 
+}
+
+.menu-dropdown a {
+    display: block;
+    padding: 5px 10px; 
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px; 
+}
+
+.menu-dropdown a:hover {
+    background-color: #f0f0f0; 
+    color: #000;
+}
+
+.menu-dropdown a:last-child {
+    border-bottom: none;
+}
+
+.menu-button.active + .menu-dropdown {
+    display: block;
+}
+
+main {
+    padding: 20px;
+    margin-top: 80px; 
+}
+
+
+section {
+    padding: 60px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#home {
+    background: url('https://www.chiroeco.com/wp-content/uploads/2023/08/AdobeStock_367144405-1024x543.jpeg') no-repeat center center/cover;
+    color: #110f0f;
+    min-height: 50vh;
+}
+
+#home h1 {
+    font-size: 36px;
+}
+
+#home p {
+    font-size: 18px;
+}
+#appt
+{
+    min-height: 2vh;
+}
+
+.appt-box {
+    margin-top: 5px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.appt-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.appt-box p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.appt-box button {
+    background-color: #1b3757;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.appt-box button:hover {
+    background-color: #1b3757;
+}
+
+#about-us {
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#about-us p {
+    margin: 20px 0;
+    background-color: #f9f9f9;
+}
+
+#services {
+    text-align: center;
+}
+
+#services h1 {
+    margin-bottom: 20px;
+}
+
+.service-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    text-align: center;
+    flex: 1 1 200px; 
+    max-width: 200px; 
+    margin-bottom: 10px;
+}
+
+.service-item img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 10px solid rgba(162, 162, 162, 0.5); 
+}
+
+.service-item p {
+    color: #333;
+    font-size: 1em;
+    margin: 0; 
+}
+.view-more  button {
+    background-color: #1b3757;
+    color: #ddd;
+    border: 0px solid #1b3757;
+    border-radius: 50px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    top: -10px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.view-more  button:hover {
+    background-color: #486d97;
+    color:  #fff;
+}
+
+.styled-paragraph {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4a4a4a;
+    max-width: 800px;
+    padding: 35px;
+    background-color: #fff;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 150px;
+    left:350px; 
+    transform: translateY(-50%);
+}
+
+.homeopathy-grid-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #4a4a4a;
+    margin-bottom: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-container {
+    background-color: #e0e0e0;
+    padding: 30px; 
+    margin-top: 0px;
+}
+
+.image-container img {
+    width: 100%; 
+    max-width: none; 
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-container p {
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-top:25px;
+}
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+}
+h1,h2,h3.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  #location {
+    padding: 20px;
+    text-align: center;
+    position: relative; 
+}
+
+#location h3 {
+    font-family: 'Nunito', sans-serif;
+    color: #5c5c5c;
+    font-size: 50px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#location .line {
+    display: inline-block;
+    width: 300px;
+    height: 2px;
+    background-color: black;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#location .highlight {
+    color: #536b88;
+    margin-left: 10px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 80px;
+}
+
+.map-container {
+    width: 90%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 500px;
+    border: 0;
+}
+
+.contact-details {
+    width: 45%;
+    font-family: 'Nunito', sans-serif;
+    color: #5c5c5c;
+    text-align: left;
+    margin-top: 60px;
+}
+
+.contact-details p {
+    margin: 0;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-container, .contact-details {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.contact-details i {
+    margin-right: 10px;
+    font-size: 24px;
+    color:#fff;
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    background-color:  #536b88; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image {
+    position: absolute;
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%; 
+    text-align: center; 
+}
+
+.image img {
+    width: 800px;
+    height: 80px;
+}

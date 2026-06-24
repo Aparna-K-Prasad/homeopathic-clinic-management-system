@@ -1,0 +1,234 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://img.freepik.com/free-photo/view-frame-with-copy-space_23-2148290929.jpg?t=st=1726700903~exp=1726704503~hmac=aa23fc572faa015865c7ea3b2e0ad6329141d4bbd292a0653288e0caf2e4a882&w=996');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh; 
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.appointment-container {
+    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 15px;
+    padding: 25px;
+    width: 650px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #d1e7dd;
+    margin-bottom: 120px; 
+}
+
+
+h1 {
+    color: #1b3757;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.calendar-section, .time-slots-section {
+    margin-bottom: 25px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-header h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.nav-arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #1b3757;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.calendar-table th, .calendar-table td {
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.calendar-table th {
+    background-color: #4773a6;
+    color: #fff;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.calendar-table td {
+    background-color: #c6dffb;
+    border: 1px solid #6598d1;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.calendar-table td:hover {
+    background-color: #78a1d0;
+}
+
+.calendar-table td.selected {
+    background-color: #195191;
+    color: #fff;
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.time-slot {
+    background-color: #759ecd;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.time-slot:hover {
+    background-color: #78a1d0;
+}
+
+.time-slot.selected {
+    background-color: #195191;
+    color: #fff;
+}
+
+h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #2e5885;
+    margin: 0;
+    gap: 10px;
+}
+
+#monthDisplay {
+    font-size: 18px;
+    color: #2e5885;
+}
+
+#yearSelect {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #69a2de;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #2e5885;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+#yearSelect:hover, #yearSelect:focus {
+    border-color: #2e5885;
+    outline: none;
+}
+
+#yearSelect::-ms-expand {
+    display: none;
+}
+
+#yearSelect {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('bx-chevron-down.svg') no-repeat right 10px center;
+    background-size: 12px; 
+    padding-right: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+}
+
+
+header {
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    padding: 12px 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out; 
+}
+
+
+header .header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #1c77fd; 
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    gap: 50px;
+}
+
+header nav ul li a {
+    color: #34557a; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+
+    text-decoration: none; 
+    transition: color 0.3s; 
+    font-family: 'Dancing Script', cursive;
+}
+
+header nav ul li a:hover {
+    color: #00060c !important; 
+}
+
+
+h1, h2.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-weight: 400; 
+    font-style: normal;
+}
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

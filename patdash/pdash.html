@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="/minipro/css/dash.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css"> 
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="clinic-name">
+                <h3>Homeo Clinic</h3>
+            </div>            
+            <nav class="sidebar-nav">
+                <ul>
+                     <li><a href="#" id="dash"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+                    <li><a href="#" id="profile"><i class='bx bx-user'></i>Profile</a></li>
+                    <li><a href="#" id="pwd"><i class="bx bx-key"></i>Reset Password</a></li>
+                    <li><a href="#" id="messages"><i class='bx bx-message'></i>Appoinment Status</a></li>
+                    <li><a href="#" id="msg"><i class='bx bx-message'></i>Consultation Status</a></li>
+                    <li><a href="#" id="appointment-booking"><i class='bx bx-calendar'></i>Appointment Booking</a></li>
+                    <li><a href="#" id="cancel_appt"><i class='bx bx-upload'></i>Appointment Cancellation</a></li>
+                    <li><a href="#" id="logout"><i class='bx bx-log-out'></i>Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <iframe name="content-frame" src="overview.php" frameborder="0" class="content-frame"></iframe>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/minipro/js/pdash.js"></script>
+    <script>
+    document.getElementById('cancel_appt').addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Hide all other content sections if any
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Show appointment content
+        const appointmentContent = document.getElementById('appointmentContent');
+        appointmentContent.style.display = 'block';
+        
+        // Load the appointment content
+        fetch('appt/appdec.php')
+            .then(response => response.text())
+            .then(data => {
+                appointmentContent.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                appointmentContent.innerHTML = 'Error loading content';
+            });
+    });
+
+    document.getElementById('logout').addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        Swal.fire({
+            title: 'Logout',
+            text: 'Are you sure you want to logout?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, logout!',
+            allowOutsideClick: false,
+            allowEscapeKey: false
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '/minipro/signlog/logout.php';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

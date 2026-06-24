@@ -1,0 +1,46 @@
+# ==========================
+# OS-specific files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Logs and temporary files
+# ==========================
+*.log
+*.tmp
+
+# ==========================
+# Environment and sensitive files
+# ==========================
+.env
+config.php   # Comment this out if safe to share config.php
+
+# ==========================
+# Database dumps and backups
+# ==========================
+*.sql
+*.bak
+
+# ==========================
+# IDE and editor-specific files
+# ==========================
+.vscode/
+.idea/
+*.swp
+
+# ==========================
+# PHP cache and session files
+# ==========================
+*.cache
+*.session
+
+# ==========================
+# Composer dependencies (if used)
+# ==========================
+vendor/
+
+# ==========================
+# Node modules (if front-end uses npm)
+# ==========================
+node_modules/

@@ -1,0 +1,20 @@
+body {
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.vitals-container {
+    background: white; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding around the content */
+}
+
+h2 {
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+/* Optional: Style the buttons */
+.btn {
+    margin-top: 20px; /* Space above the button */
+    width: 100%; /* Full-width button */
+}

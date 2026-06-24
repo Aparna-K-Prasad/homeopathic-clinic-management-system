@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    color: #333;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 12px 0;
+    background-color: #fff; 
+    z-index: 1000;
+}
+
+header .header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px;
+    margin-top: -10px;
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    margin: 0;
+    margin: 0;
+    font-size: 30px;
+    color: #1c77fd;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+header nav ul li a {
+    color: #34557a !important;  
+    padding: 10px 15px; 
+    cursor: pointer; 
+    font-size: 20px !important;
+    position: relative; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+
+header nav ul li a:hover {
+    color: #00060c !important; 
+}
+
+#welcome h1,
+#about-us h1 {
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+}
+
+#welcome p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.img-fluid {
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .about-text, .about-image {
+        margin-bottom: 20px;
+    }
+}
+
