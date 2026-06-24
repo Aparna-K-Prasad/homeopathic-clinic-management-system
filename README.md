@@ -169,10 +169,6 @@ This project helped in understanding:
 
 **Aparna Prasad**
 
-Master of Computer Applications (MCA)
-
-Interested in Artificial Intelligence, Machine Learning, and Healthcare Technology.
-
 ## License
 
 This project is developed for educational and academic purposes.
